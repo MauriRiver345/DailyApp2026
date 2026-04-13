@@ -454,7 +454,11 @@
         "required": [
           "displayName",
           "email",
-          "password"
+          "password",
+          "gender",
+          "city",
+          "country",
+          "birthDay"
         ],
         "properties": {
           "displayName": {
@@ -469,6 +473,23 @@
           "password": {
             "type": "string",
             "minLength": 6
+          },
+          "gender": {
+            "type": "string",
+            "minLength": 1
+          },
+          "city": {
+            "type": "string",
+            "minLength": 1
+          },
+          "country": {
+            "type": "string",
+            "minLength": 1
+          },
+          "birthDay": {
+            "type": "string",
+            "format": "date",
+            "minLength": 1
           }
         }
       },
@@ -540,10 +561,10 @@
             "type": "string",
             "nullable": true
           },
-          "memberId": {
-            "type": "string"
+            "memberId": {
+              "type": "string"
+            }
           }
-        }
         },
       "MemberUpdateRequest": {
         "type": "object",
